@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# News App – React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile news application built using **React Native, Expo, and TypeScript**, powered by the NewsAPI. It allows users to browse the latest news, explore different categories, search for articles, and filter news based on their preferred country.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Latest News:** Fetch and display the latest news articles using NewsAPI.
+- **Category Filtering:** Browse news across different categories.
+- **Country Selection:** Choose a country to view region-specific headlines.
+- **Search Functionality:** Search for news articles using keywords.
+- **News Details:** View article images, titles, descriptions, authors, sources, and publication dates.
+- **Infinite Scrolling:** Automatically load additional articles while scrolling.
+- **Pull to Refresh:** Refresh the news feed to fetch the latest articles.
+- **Loading & Error Handling:** Display loading indicators, error messages, and retry options.
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- **React Native** – Cross-platform mobile application development.
+- **Expo** – Development and application tooling.
+- **TypeScript** – Type-safe application development.
+- **NewsAPI** – Fetching news articles and headlines.
+- **Expo Router** – Application navigation and routing.
+- **Expo Image** – Efficient image rendering.
+- **React Native Vector Icons** – Icons and UI elements.
 
-   ```bash
-   npx expo start
-   ```
+## Project Structure
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+News-App/
+│
+├── app/
+│   ├── _layout.tsx
+│   └── index.tsx
+│
+├── assets/
+│   └── images/
+│
+├── components/
+│   ├── header.tsx
+│   ├── news-card.tsx
+│   └── news-feed.tsx
+│
+├── config/
+│   └── api.ts
+│
+├── services/
+│   └── newsApi.ts
+│
+├── types/
+│   └── news.ts
+│
+├── app.json
+├── package.json
+└── tsconfig.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+### 1. Clone the Repository
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+git clone https://github.com/goutham-ketham/News-App.git
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Navigate to the Project Directory
 
-## Join the community
+```bash
+cd News-App
+```
 
-Join our community of developers creating universal apps.
+### 3. Install Dependencies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install
+```
+
+### 4. Configure NewsAPI
+
+- Obtain an API key from [NewsAPI](https://newsapi.org/).
+- Edit the `.env` file in the project root directory.
+- Add the following environment variable:
+
+```env
+EXPO_PUBLIC_NEWS_API_KEY=your_api_key_here
+```
+
+### 5. Start the Application
+
+```bash
+npx expo start
+```
+
+Run the application using an Android emulator, iOS simulator, or Expo Go.
+
+## API Integration
+
+This application uses the [NewsAPI](https://newsapi.org/) Top Headlines endpoint to retrieve news articles.
+
+The API integration supports:
+- Country-based news filtering.
+- Category-based news filtering.
+- Keyword-based news searching.
+- Pagination for loading additional articles.
+
+## Future Improvements
+
+- Add bookmarks to save favorite articles.
+- Implement dark mode.
+- Add personalized news recommendations.
+- Introduce detailed in-app article reading.
+
+## License
+
+This project is developed for learning and educational purposes.
