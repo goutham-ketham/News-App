@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Module-5-NewsApp",
-    "slug": "Module-5-NewsApp",
+    "name": "NewsApp",
+    "slug": "NewsApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "module5newsapp",
+    "scheme": "5newsapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
